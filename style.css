@@ -746,8 +746,6 @@ span {
     .topic h1{
         font-size: 23px;
     }   
-}
-@media only screen and (max-width:499.9px){
     .hide{
         display: none;
     }
@@ -771,5 +769,4 @@ span {
         flex-basis: 35%;
         height: auto;
     }
-
 }
