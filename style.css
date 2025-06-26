@@ -670,7 +670,6 @@ span {
         flex-wrap: wrap;
     }
     .categories {
-
         display: flex;
         flex-wrap: wrap;
     }
@@ -683,14 +682,15 @@ span {
         height: 300px;
         object-fit: cover;
     }
-    .recommended-course__s1 {
-        
-        flex-basis: 200px;
-        padding: 10px;
-    }
     .footer-s1{
         flex-grow: 1;
         flex-basis: 20%;
+        
+    }
+    .footer-s2{
+        flex-grow: 3;
+        flex-basis: 20%;
+        
     }
     .recommended-course{
         gap: 20px;
@@ -745,5 +745,31 @@ span {
     }
     .topic h1{
         font-size: 23px;
+    }   
+}
+@media only screen and (max-width:499.9px){
+    .hide{
+        display: none;
     }
+    .navbar-s2{
+        display: none;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    .recommended-course{
+        gap: 10px;
+        padding-top: 20px;
+        
+    }
+    .recommended{
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .recommended-course__s1{
+        flex-basis: 35%;
+        height: auto;
+    }
+
 }
