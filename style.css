@@ -762,7 +762,7 @@ span {
         justify-content: space-between;
     }
     .recommended-course{
-        gap: 15px;
+        gap: 0;
         padding-top: 20px;
     }
     .recommended{
@@ -778,7 +778,7 @@ span {
         margin-right: 10px;
     }
     .recommended-course__s1 img{
-        height: 100px;
+        height: 120px;
     }
     .badges{
         display: none;
