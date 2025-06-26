@@ -18,6 +18,11 @@ body {
     justify-content: space-between;
     border-bottom: solid black 1px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    
 }
 
 .navbar-s1 {
@@ -98,6 +103,88 @@ span1 {
     border-radius: 6px;
     padding: 6px;
 }
+.navbar-s3__p4{
+    display: none;
+}
+.explore{
+    position: relative;
+    cursor: pointer;
+}
+.explore__popup h4{
+    color: rgb(80, 80, 80);
+}
+.explore__popup p{
+   margin-top: 10px;
+}
+.explore__popup{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 350%;
+    top: 30px;
+    border: solid black 1px;
+    display: none;
+}
+.explore:hover .explore__popup{
+    display: block;
+}
+
+
+.explore__popup-category1 p{
+    margin-top: 10px;
+}
+.explore__popup-one{
+    position: relative;
+}
+.explore__popup-category1{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    top: 0;
+    border: solid black 1px;
+    left: 190px;
+    display: none;
+}
+.explore__popup-one:hover .explore__popup-category1{
+    display: block;
+}
+
+
+.navbar-s3__p1{
+    position: relative;
+    cursor: pointer;
+}
+.navbar-s3__p2{
+    position: relative;
+    cursor: pointer;
+}
+.navbar-s3__p3{
+    position: relative;
+    cursor: pointer;
+}
+.business{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 250px;
+    top: 30px;
+    right: 0;
+    border: solid black 1px;
+    display: none;
+}
+.navbar-s3__p1:hover .business{
+    display: block;
+}
+.navbar-s3__p2:hover .business{
+    display: block;
+}
+.navbar-s3__p3:hover .business{
+    display: block;
+}
 
 /*-------------Categories-------------*/
 .categories {
@@ -108,13 +195,13 @@ span1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     gap: 17px;
     align-items: center;
+    cursor: pointer;
 }
 
 .categories p:hover {
-    background-color: #A435F0;
-    color: white;
-    border-radius: 10px;
-    padding: 6px;
+    color: #A435F0;
+    transition: 1s;
+    transform: scale(1.1);
 }
 
 /*--------------welcome---------------*/
@@ -151,23 +238,44 @@ span1 {
 .sales-image img {
     width: 100%;
     padding-top: 10px;
+    position: relative;
 }
 
-.sales-image__s1 {
+.flash-sale {
     position: absolute;
-    top: 25%;
+    background-color: white;
     color: black;
-    padding: 10px;
+    padding: 20px;
     border: solid #5022C3 0px;
-    height: 200px;
-    width: 25%;
-    margin-left: 70px;
-    box-shadow: 0 2px 4px #5022c394;
-    transform: scale(1.02);
+    left: 10%;
+    box-shadow: black;
+    border: solid black 2px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    width: auto;
+    height: auto;
+    top: 28%;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+} 
+
+.flash-sale p{
+    padding-left: 10px;
 }
 
-.sales-image__s1:hover {
-    transform: scale(1.02);
+.flash-sale:hover {
+    transform: scale(1.1);
+    
 }
 
 .sales-image__s1 h1 {
@@ -204,7 +312,7 @@ span1 {
     border: solid black 0px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     height: auto;
-    flex-basis: 250px;
+    flex-basis: 20%;
     font-size: small;
     text-align: left;
     flex-grow: 1;
@@ -356,6 +464,8 @@ span {
 .topic__container p:hover {
     background-color: #A435F0;
     color: white;
+    transition: 1s;
+    
 }
 
 /*--------------certification course---------------*/
@@ -521,55 +631,119 @@ span {
     font-weight: 100;
 }
 
-
+@media only screen and (max-width:1000px){
+    .flash-sale{
+        
+        top: 25%;
+    }
+    .sales-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .navbar-s3{
+        display: none;
+    }
+    .navbar-s2{
+        width: 55%;
+    }
+    .navbar-s3__p4{
+        display: block;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    .categories{
+        display: none;
+    }
+    
+}
 @media only screen and (max-width:600px) {
     body {
         padding: 0;
         margin: 0;
+        font-size: 10px;
     }
-
     .navbar {
         margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
     }
-
     .categories {
 
         display: flex;
         flex-wrap: wrap;
     }
-
     .welcome {
         margin-left: 30px;
         margin-top: 30px;
     }
-
     .sales-image img {
-
         width: 100%;
-        height: 80vh;
+        height: 300px;
         object-fit: cover;
-        object-position: 45%;
     }
-
-    .sales-image__s1 {
-        position: absolute;
-        top: 25%;
-        color: black;
-        padding: 10px;
-        border: solid #5022C3 0px;
-        height: auto;
-        width: 45%;
-        margin-left: 30px;
-        box-shadow: 0 2px 4px #5022c394;
-    }
-
     .recommended-course__s1 {
         
         flex-basis: 200px;
         padding: 10px;
-
-
+    }
+    .footer-s1{
+        flex-grow: 1;
+        flex-basis: 20%;
+    }
+    .recommended-course{
+        gap: 20px;
+        padding-top: 20px;
+        
+    }
+    .recommended{
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .recommended-course__s1{
+        flex-basis: 40%;
+    }
+    .start-learning-s2{
+        flex-grow: 1;
+        flex-basis: 100%;
+        font-size: medium;
+    }
+    .flash-sale{
+        width: auto;
+        height: auto;
+        top: 30%;
+    }
+    .navbar-s3{
+        display: none;
+    }
+    .navbar-s2{
+        width: 55%;
+    }
+    .navbar-s3__p4{
+        display: block;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    .categories{
+        display: none;
+    }
+    .certification-s1{
+        flex-basis: 70%;
+    }
+    .certification-s2{
+        flex-basis: 70%;
+    }
+    .certification{
+        margin: 8%;
+    }
+    .topic{
+        margin: 3%;
+        font-size: medium;
+    }
+    .topic h1{
+        font-size: 23px;
     }
 }
