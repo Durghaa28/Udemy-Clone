@@ -674,12 +674,17 @@ span {
         flex-wrap: wrap;
     }
     .welcome {
-        margin-left: 30px;
+        margin-left: 10px;
         margin-top: 30px;
+       
+    }
+    .welcome-icon{
+        font-size: 23px;
+
     }
     .sales-image img {
         width: 100%;
-        height: 300px;
+        height: 250px;
         object-fit: cover;
     }
     .footer-s1{
@@ -714,6 +719,7 @@ span {
         width: auto;
         height: auto;
         top: 30%;
+        left: 10px;
     }
     .navbar-s3{
         display: none;
@@ -756,21 +762,41 @@ span {
         justify-content: space-between;
     }
     .recommended-course{
-        gap: 10px;
+        gap: 15px;
         padding-top: 20px;
     }
     .recommended{
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 10px;
     }
     .recommended-course__s1{
         flex-basis: 35%;
         height: auto;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .recommended-course__s1 img{
+        height: 100px;
     }
     .badges{
         display: none;
     }
     .b3{
         display: none;
+    }
+    .popular{
+        padding-top: 0;
+        text-align: center;
+    }
+    .popular h1{
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 600;
+    }
+    .popular h2{
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 }
